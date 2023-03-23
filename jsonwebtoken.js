@@ -15,6 +15,10 @@ function sign(jwk) {
         return false;
     }
 }
+
+
+
+
 function verify(token, public_pem) {
     try {
         const verifying = jwt.verify(token, public_pem)

@@ -1,0 +1,24 @@
+{
+  "name": "arconnectbackup",
+  "version": "1.0.0",
+  "description": "Allow users to back up and make transactions to their Othent account with their ArConnect wallet",
+  "main": "jsonwebtoken.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Othent/ArConnectBackup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Othent/ArConnectBackup/issues"
+  },
+  "homepage": "https://github.com/Othent/ArConnectBackup#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.0",
+    "jwk-to-pem": "^2.0.5"
+  }
+}

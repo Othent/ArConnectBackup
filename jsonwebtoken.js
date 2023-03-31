@@ -7,6 +7,7 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
     try {
         const private_pem = jwkToPem(jwk, {private: true});
         const public_pem = jwkToPem(jwk);
+        console.log(public_pem)
 
         const payload = {
 
@@ -18,7 +19,7 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
               toContractFunction: "createPost",
               toContractId: "XL_AtkccUxD45_Be76Qe_lSt8q9amgEO9OQnhIo-2xI",
               txnData: {
-                blog_post_2: "JWK TXN !"
+                blog_post_1: "JWK TXN !"
               }
             },
             function: "JWKBackupTxn"
@@ -60,8 +61,8 @@ async function doIt() {
   const { token, public_pem } = sign(jwk)
 
   console.log(token)
-  // const validity = verify(token, public_pem)
-  // console.log(validity)
+  const validity = verify(token, public_pem)
+  console.log(validity)
 
 
 }

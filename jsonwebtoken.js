@@ -60,11 +60,27 @@ async function doIt() {
   jwk = JSON.parse(jwk)
   const { token, public_pem } = sign(jwk)
 
-  console.log(token)
+  // console.log(token)
   const validity = verify(token, public_pem)
-  console.log(validity)
+  // console.log(validity)
+
+  console.log(formatPemPublicKey(public_pem))
 
 
 }
 
 doIt()
+
+
+function formatPemPublicKey(pemKey) {
+
+  pemKey = pemKey.replace(/\n|\s/g, '');
+  pemKey = pemKey.replace(/^-----BEGINPUBLICKEY-----/, '');
+  pemKey = pemKey.replace(/-----ENDPUBLICKEY-----$/, '');
+  const lines = pemKey.match(/.{1,64}/g);
+  const formattedKey = '-----BEGIN PUBLIC KEY-----\n' + lines.join('\n') + '\n-----END PUBLIC KEY-----';
+
+  return formattedKey;
+}
+
+

@@ -19,7 +19,7 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
               toContractFunction: "createPost",
               toContractId: "XL_AtkccUxD45_Be76Qe_lSt8q9amgEO9OQnhIo-2xI",
               txnData: {
-                blog_post_1: "JWK TXN !"
+                blog_post_1: "JWK TXN WORKING!"
               }
             },
             function: "JWKBackupTxn"
@@ -60,11 +60,13 @@ async function doIt() {
   jwk = JSON.parse(jwk)
   const { token, public_pem } = sign(jwk)
 
-  // console.log(token)
-  const validity = verify(token, public_pem)
-  // console.log(validity)
+  console.log(token)
+  const validity = verify(token, public_pem, { algorithms: ['RS256'] })
+  console.log(validity)
 
-  console.log(formatPemPublicKey(public_pem))
+  // console.log(formatPemPublicKey(public_pem))
+
+
 
 
 }

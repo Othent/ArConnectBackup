@@ -13,6 +13,7 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
 
           sub: 'google-oauth2|113378216876216346016', // lorimerjenkins1@gmail.com
           contract_id: 'Tb33ItPlttNYtABjMo03gK425vCcYYMX4c7i8W_I2X0', // user will need to provide,
+          tags: [ {name: 'Test', value: 'Hello World'} ],
           
           contract_input: {
             
@@ -20,7 +21,7 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
               toContractFunction: "createPost",
               toContractId: "XL_AtkccUxD45_Be76Qe_lSt8q9amgEO9OQnhIo-2xI",
               txnData: {
-                blog_post_1: "JWK TXN WORKING!"
+                blog_post_1: "JWK TXN!"
               }
             },
             function: "JWKBackupTxn"

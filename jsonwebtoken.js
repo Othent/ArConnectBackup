@@ -24,7 +24,7 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
                 blog_post_1: "JWK TXN!"
               }
             },
-            function: "JWKBackupTxn"
+            othentFunction: "JWKBackupTxn"
             },
           };
           

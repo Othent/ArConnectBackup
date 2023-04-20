@@ -12,16 +12,16 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
         const payload = {
 
           sub: 'google-oauth2|113378216876216346016', // lorimerjenkins1@gmail.com
-          contract_id: '2W9NoIJM1SuaFUaSOJsui_5lD_NvCHTjez5HKe2SjYU', // user will need to provide,
+          contract_id: 'qv-J2HVm8eez3ENiSwKaVuVRj1dbXQ06NBB56GI6tao', // user will need to provide,
           tags: [ {name: 'Test', value: 'JWKJWKJWK'} ],
           
           contract_input: {
             
             data: {
               toContractFunction: "createPost",
-              toContractId: "XL_AtkccUxD45_Be76Qe_lSt8q9amgEO9OQnhIo-2xI",
+              toContractId: "2W9NoIJM1SuaFUaSOJsui_5lD_NvCHTjez5HKe2SjYU",
               txnData: {
-                blog_post_1: "JWK TXN!"
+                blog_post_1: "BAHHHHHHHHHH!"
               }
             },
             othentFunction: "JWKBackupTxn"

@@ -18,9 +18,9 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
             
             data: {
               toContractFunction: "createPost",
-              toContractId: "2W9NoIJM1SuaFUaSOJsui_5lD_NvCHTjez5HKe2SjYU",
+              toContractId: "tQKJCf2E9lIaNTjM8ELK6ATlJtef8cVmq68c9XnVuj0",
               txnData: {
-                blog_post_1: "BAHHHHHHHHHH!"
+                blog_post_1: "Hello There!"
               }
             },
             othentFunction: "JWKBackupTxn"

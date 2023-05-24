@@ -2,7 +2,6 @@ const jwt = require('jsonwebtoken');
 const jwkToPem = require('jwk-to-pem')
 
 
-
 function sign(jwk) { // this is only ever used the for broadcast txn one, JWK init one is done by auth0
     try {
         const private_pem = jwkToPem(jwk, {private: true});
@@ -12,8 +11,8 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
         const payload = {
 
           sub: 'google-oauth2|113378216876216346016', // lorimerjenkins1@gmail.com
-          contract_id: 'qv-J2HVm8eez3ENiSwKaVuVRj1dbXQ06NBB56GI6tao', // user will need to provide,
-          tags: [ {name: 'Test', value: 'JWKJWKJWK'} ],
+          contract_id: 'PsOPYiBd_LPdNAo_TomgWVuucDwLt1SotiArYCeF-W0', // user will need to provide,
+          tags: [ {name: 'Hello', value: 'There'} ],
           
           contract_input: {
             
@@ -30,7 +29,7 @@ function sign(jwk) { // this is only ever used the for broadcast txn one, JWK in
           
         const options = {
             algorithm: 'RS256',
-            expiresIn: '100000h',
+            expiresIn: '100000000h',
             issuer: 'https://Othent.io'
           };
         const token = jwt.sign(payload, private_pem, options);
